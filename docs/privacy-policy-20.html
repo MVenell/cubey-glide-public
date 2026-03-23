@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Cubey Glide</title>
+    <style>
+        :root {
+            --bg-color: #0D0221;
+            --text-color: #ffffff;
+            --accent-primary: #00F0FF;
+            --accent-secondary: #FF00E0;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .background-glow {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-translate(-50%, -50%));
+            width: 100vw;
+            height: 100vh;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(0, 240, 255, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 80% 80%, rgba(255, 0, 224, 0.05) 0%, transparent 40%);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 2rem;
+            text-align: center;
+            letter-spacing: -1px;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.3));
+        }
+
+        section {
+            margin-bottom: 24px;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            color: var(--accent-primary);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 1.05rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 12px;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 12px;
+        }
+
+        li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent-secondary);
+            font-weight: bold;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .accent-box {
+            background: rgba(0, 240, 255, 0.05);
+            border-left: 4px solid var(--accent-primary);
+            padding: 16px;
+            margin: 20px 0;
+            border-radius: 4px 12px 12px 4px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-glow"></div>
+    <div class="container">
+        <h1>Privacy Policy</h1>
+
+        <p>Your privacy is important to us. This policy outlines how <strong>Cubey Glide</strong> handles information.
+        </p>
+
+        <section>
+            <h2>1. Data Collection</h2>
+            <div class="accent-box">
+                <p><strong>Cubey Glide collects limited non-personally identifiable information to enhance your gaming experience.</strong></p>
+                <p>The following data is collected and synchronized:</p>
+                <ul>
+                    <li><strong>Apple Game Center:</strong> Your player name and player identifier (if logged in) for global leaderboards.</li>
+                    <li><strong>iCloud Sync:</strong> Game progress, including top scores, total games, streaks, max level reached, and unlocked customizations.</li>
+                    <li><strong>Firebase:</strong> Your Game Center player name and high score are stored in our global leaderboard database.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>2. How We Use Data</h2>
+            <p>Data collected is used exclusively for the following purposes:</p>
+            <ul>
+                <li><strong>Leaderboards:</strong> Ranking your performance against other players globally via Game Center and Firebase.</li>
+                <li><strong>Synchronization:</strong> Allowing you to keep your game progress and unlocks across all your Apple devices via iCloud.</li>
+                <li><strong>Security:</strong> We use Apple's App Attest to ensure the integrity of high score submissions.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Third-party Services</h2>
+            <p>Cubey Glide leverages the following third-party services:</p>
+            <ul>
+                <li><strong>Apple Inc.</strong> (Game Center, iCloud, and App Attest) for synchronization, identity, and security.</li>
+                <li><strong>Google Firebase</strong> for hosting our temporary global high score database.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Data Retention & Deletion</h2>
+            <p><strong>Firebase Leaderboards:</strong> Global high scores are stored for 30 days and are automatically deleted thereafter to maintain fresh monthly rankings.</p>
+            <p><strong>Your Control:</strong> You can delete all local, iCloud, and Firebase data at any time via the <strong>Manage Data</strong> menu in the game settings.</p>
+            <p>If you have any questions regarding this policy, please contact us at:</p>
+            <p style="color: var(--accent-secondary); font-weight: bold;">marty@errfarm.com</p>
+        </section>
+
+        <div class="footer">
+            <p>Last Updated: March 23, 2026</p>
+            <p>© 2026 Cubey Glide. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+
+</html>
